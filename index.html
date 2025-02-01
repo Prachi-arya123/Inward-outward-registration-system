@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIORMS - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-container">
+            <!-- Left Side - Illustration -->
+            <div class="illustration-side">
+                <img src="./assets/images/auth.jpg" alt="WIORMS System">
+            </div>
+
+            <!-- Right Side - Form -->
+            <div class="form-side">
+                <div class="form-header">
+                    <h1>Welcome to WIORMS</h1>
+                    <p>Web based Inward-Outward Registration Management System</p>
+                    <!-- <p class="college-name">Dayanand College of Commerce, Latur</p> -->
+                </div>
+
+                <div class="form-wrapper">
+                    <!-- Signup Form -->
+                    <form id="signupForm" class="active">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="fullName" placeholder="Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="College Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="Password" required>
+                        </div>
+
+                        <button type="submit" class="signup-btn">
+                            Create Account <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                        <p class="login-link">
+                            Already have an account? <a href="#" id="loginLink">Login</a>
+                        </p>
+                    </form>
+
+                    <!-- Login Form -->
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" placeholder="College Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                        </div>
+
+                        <button type="submit" class="signup-btn">
+                            Login <i class="fas fa-sign-in-alt"></i>
+                        </button>
+
+                        <p class="login-link">
+                            Don't have an account? <a href="#" id="signupLink">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

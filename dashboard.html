@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIORMS Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <style>
+        /* Success Message Styles */
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #52c41a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="company-logo">
+                <img style="object-fit: contain;" src="./assets//images/avtar.png" alt="User Avatar" class="profile-img">
+                <h3>John</h3>
+                <p>Administrator</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <!-- <a href="#">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assign Task</span>
+                </a> -->
+                <!-- <a href="#">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Re-Assign Task</span>
+                </a> -->
+                <!-- <a href="#">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Register</span>
+                </a> -->
+                <!-- <a href="#">
+                    <i class="fas fa-book"></i>
+                    <span>Library</span>
+                </a> -->
+                <a href="#" id="signOutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sign Out</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <!-- <div class="nav-items">
+                    <a href="#"><i class="fas fa-check-circle"></i> Check Status</a>
+                    <a href="#"><i class="fas fa-bell"></i> Reminder</a>
+                    <a href="#"><i class="fas fa-folder"></i> Directory</a>
+                    <a href="#"><i class="fas fa-rupee-sign"></i> Payment</a>
+                    <a href="#"><i class="fas fa-chart-bar"></i> Reports</a>
+                    <a href="#"><i class="fas fa-book"></i> e-Book</a>
+                </div> -->
+                <div class="user-info">
+                    <span class="name">John</span>
+                    <span class="role">Administrator</span>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <h1 class="dashboard-title">WIORMS</h1>
+                <p class="dashboard-description">Web based Inward-Outward Registration Management System</p>
+
+                <!-- Register Content -->
+                <div class="register-content">
+                    <button class="add-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Add Inward</span>
+                    </button>
+                    
+                    <table class="records-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Document No.</th>
+                                <th>File Name</th>
+                                <th>Client Name</th>
+                                <th>Description</th>
+                                <th>Date of receipt</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1016</td>
+                                <td>Financial Statement</td>
+                                <td>Scantech Laser Private Limited</td>
+                                <td>Financial Statement 17-18</td>
+                                <td>01-02-2019</td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>1015</td>
+                                <td>Documents</td>
+                                <td>Expert Town Planners Private Limited</td>
+                                <td>Expert town documents</td>
+                                <td>29-01-2019</td>
+                                <td>
+                                    <button class="action-btn">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
